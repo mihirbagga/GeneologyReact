@@ -1,0 +1,261 @@
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+div.gbttooltip {
+  position: absolute;
+  text-align: left;
+  pointer-events: none;
+  // width: 400px;
+  height: auto;
+  max-height: 185px;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1.1em;
+  color: #333;
+  border-radius: 4px;
+  background: #e4ebf5;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  // border: 1px solid rgba(200, 200, 200, 0.85);
+  border: 1px solid rgba(158, 158, 159 ,0.84);;
+  opacity: 0;
+}
+
+div.headerattribute {
+  /* position: absolute; */
+  // text-align: right;
+  // right: 10px;
+  // top: 28px;
+  // font-size: 13 px;
+  /* width: 100px; */
+  font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+  // background-color: #303f9f;
+  color:#495fc3;
+  // color: #826430;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+div.tooltipheader {
+  background-color: #303f9f;
+  color: white;
+  border-color: #303f9f;
+
+  font-size: 13px;
+  margin-bottom: 2px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+  height: 37px;
+}
+
+.alert-warning {
+  border-color: #303f9f;
+}
+
+div#federalDiv {
+  // width: 450px;
+  max-height: 350px;
+  /* left: 0px; 
+  top: 35px; 
+  position: absolute; */
+}
+
+#main {
+  width: 100%;
+  /* overflow: scroll; */
+  overflow: hidden;
+  /* border: 2px solid #444; */
+  position: relative;
+  min-height: 2500px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: #dbe2e2;
+}
+
+#backwardDiv {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#forwardDiv {
+  position: absolute;
+}
+
+.chart-legends {
+  margin-top: 15px;
+}
+
+.chart-legends span {
+  padding: 0 5px;
+}
+
+.grabbableactive {
+  cursor: grabbing;
+}
+
+.grabbable {
+  cursor: grab;
+}
+
+#custom-zoom-controls {
+  position: absolute;
+  right: 0px;
+  top: 45px;
+  z-index: 10;
+}
+
+#custom-genealogy{
+  position: absolute;
+  right: 0px;
+  top: 45px;
+  z-index: 1;
+  padding-top: 45px;
+  display: flex;
+}
+
+.chart-tree-d3 {
+  position: relative;
+}
+
+#custom-zoom-controls div {
+  display: inline-block;
+}
+
+.chart-div {
+  margin: 20px;
+  width: 80%;
+  height: 800px;
+  transform: scaleX(-1);
+  border: 2px solid rgb(78, 78, 78);
+  border-radius: 5px;
+  position: relative;
+  left: 10%;
+  > div {
+    > svg {
+      > g {
+        transform: translate(2%, 47%) scale(0.15) !important;
+      }
+    }
+  }
+}
+
+#tooltip-modal {
+  > div {
+    background-color: transparent !important;
+  }
+}
+
+.tooltip-style {
+  width: auto;
+  text-transform: capitalize;
+  height: auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+#gbtonclick{
+  position: absolute;
+  // background: white;
+  width: 175px;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: none;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.9);
+  // background: #e9ecefb0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(200, 200, 200, 0.85);
+  // font-family:  Sans-Serif;
+}
+
+
+.additionalParentLink {
+  fill: none;
+  stroke:rgb(255, 140, 0);
+  stroke-width: 3;
+  stroke-linecap: round !important;
+    opacity: 0.7 !important;
+}
+.context-menu{
+  position: fixed;
+  display: none;
+  width: 140px;
+  box-shadow: 2px 2px 9px #aaa;
+  overflow: hidden;
+  border:solid 1px #aaa;
+}
+
+.context-menu > div{
+      padding: 10px;
+      background: #eee;
+      border-bottom: solid 1px #aaa;
+      font-size: 11pt;
+      cursor:pointer;
+  }
+
+  .context-menu > div:hover{
+      background:#fff;
+  }
+
+  .context-menu.show{
+      display:block;
+  }
+  .container{
+    background: #f6f6f6;
+  }
+
+  .contextmenu{
+    width: 200px;
+    height: auto;
+    box-shadow: 0 0 20px 0 #ccc;
+    position: absolute;
+    display: none;
+  }
+
+  .contextmenu ul{
+    list-style: none;
+    padding: 5px 0px 5px 0px;
+  }
+
+  .contextmenu ul li:not(.separator){
+    padding: 10px 5px 10px 5px;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+  }
+
+  .contextmenu ul li:hover{
+    background: #eee;
+    border-left: 4px solid #666;
+  }
+
+  .separator{
+    height: 1px;
+    background: #dedede;
+    margin: 2px 0px 2px 0px;
+  }
